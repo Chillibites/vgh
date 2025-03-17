@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield, Lightbulb, Award } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -51,45 +50,39 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Values</h2>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p>
               We believe in core values that drive our success and commitment to our clients.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="mb-4 inline-block text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 13l2-2 4 4 8-8M5 21h4v-4M19 3h-4v4" />
-                </svg>
+              <div className="mb-4 inline-block text-white">
+                <Shield className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Integrity</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p>
                 We operate with utmost transparency and honesty, building trust with every client.
               </p>
             </div>
             <div className="text-center">
-              <div className="mb-4 inline-block text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />
-                </svg>
+              <div className="mb-4 inline-block text-white">
+                <Lightbulb className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p>
                 Continuously improving and integrating cutting-edge technology to enhance our services.
               </p>
             </div>
             <div className="text-center">
-              <div className="mb-4 inline-block text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
+              <div className="mb-4 inline-block text-white">
+                <Award className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p>
                 Delivering quality services that consistently exceed expectations.
               </p>
             </div>
