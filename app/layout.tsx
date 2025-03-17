@@ -37,10 +37,6 @@ export const metadata: Metadata = {
       'Experience reliable and efficient logistics services across the UK and Europe with VGH Logistics.',
     //images: ['https://www.vghlogistics.com/og-image.jpg'],
   },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
 };
 
 export default function RootLayout({
