@@ -9,8 +9,38 @@ import Footer from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'VGH Logistics - Professional Logistics Solutions',
-  description: 'VGH Logistics provides professional logistics and transportation services across the UK and Europe.',
+  title: 'VGH Logistics - Professional Logistics and Transportation Solutions',
+  description:
+    'Experience reliable and efficient logistics services across the UK and Europe with VGH Logistics. Our innovative solutions and dedicated team ensure your shipments arrive on schedule, enhancing your business efficiency.',
+  keywords:
+    'logistics, transportation, road freight, international shipping, express delivery, UK, Europe, haulage, VGH Logistics',
+  openGraph: {
+    title: 'VGH Logistics - Professional Logistics and Transportation Solutions',
+    description:
+      'Experience reliable and efficient logistics services across the UK and Europe with VGH Logistics. Discover our innovative solutions for streamlining your transportation operations.',
+    //url: 'https://www.vghlogistics.com',
+    siteName: 'VGH Logistics',
+    //images: [
+      //{
+        //url: 'https://www.vghlogistics.com/og-image.jpg',
+        //width: 1200,
+        //height: 630,
+        //alt: 'VGH Logistics Hero Image',
+      //},
+    //],
+    //type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VGH Logistics - Professional Logistics and Transportation Solutions',
+    description:
+      'Experience reliable and efficient logistics services across the UK and Europe with VGH Logistics.',
+    //images: ['https://www.vghlogistics.com/og-image.jpg'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({

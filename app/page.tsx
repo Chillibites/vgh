@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Package, Globe, Clock, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
+import { Truck, Globe, Clock, ArrowRight, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
   return (
