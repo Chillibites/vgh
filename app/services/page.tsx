@@ -11,12 +11,6 @@ export default function ServicesPage() {
       icon: <Truck className="h-10 w-10" />,
     },
     {
-      title: 'Warehousing',
-      description:
-        'Optimize your supply chain with our state-of-the-art warehousing facilities. Our secure, climate-controlled storage spaces come equipped with advanced inventory management systems, real-time tracking, and 24/7 surveillance. Whether you require short-term storage or long-term inventory solutions, our comprehensive services—including order fulfillment, packaging, and streamlined distribution—ensure your goods are always in safe hands.',
-      icon: <Package className="h-10 w-10" />,
-    },
-    {
       title: 'International Shipping',
       description:
         'Expand your business horizons with our international shipping services that simplify global trade. Our expert team navigates customs regulations, documentation, and cross-border challenges while coordinating with a trusted network of global carriers. Enjoy a seamless shipping experience that is both cost-effective and punctual, empowering you to reach new markets with confidence.',

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -12,11 +12,6 @@ const Footer = () => {
             <p className="mb-4">
               Professional logistics solutions for businesses across the UK and Europe.
             </p>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/varzimHaulage/" className="hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </Link>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -46,7 +41,6 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-white mb-4">Services</h3>
             <ul className="space-y-2">
               <li>Road Freight</li>
-              <li>Warehousing</li>
               <li>International Shipping</li>
               <li>Express Delivery</li>
             </ul>
@@ -63,6 +57,12 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
                 varziminfo@gmail.com
+              </li>
+              <li className="flex items-center">
+                <Link href="https://www.facebook.com/varzimHaulage/" className="flex items-center hover:text-white">
+                  <Facebook className="h-5 w-5" />
+                  <span className="ml-2">Facebook</span>
+                </Link>
               </li>
             </ul>
           </div>

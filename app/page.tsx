@@ -51,17 +51,12 @@ export default function Home() {
               Comprehensive logistics solutions tailored to meet your business needs
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: <Truck className="h-10 w-10" />,
                 title: 'Road Freight',
                 description: 'Efficient road transportation across the UK and Europe',
-              },
-              {
-                icon: <Package className="h-10 w-10" />,
-                title: 'Warehousing',
-                description: 'Secure storage solutions for your goods',
               },
               {
                 icon: <Globe className="h-10 w-10" />,
