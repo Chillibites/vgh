@@ -37,11 +37,19 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
+              src="/logo.png"
+              alt="VGH Logistics"
+              width={300}
+              height={100}
+              className="block dark:hidden h-20 w-auto transition-transform duration-300 hover:scale-105"
+              priority
+            />
+            <Image
               src="/logo-white.png"
               alt="VGH Logistics"
               width={300}
               height={100}
-              className="h-20 w-auto transition-transform duration-300 hover:scale-105"
+              className="hidden dark:block h-20 w-auto transition-transform duration-300 hover:scale-105"
               priority
             />
           </Link>
@@ -52,8 +60,8 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white hover:text-primary transition-colors relative group"
-              >
+                className="text-primary transition-colors relative group"
+                >
                 {item.label}
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
@@ -68,7 +76,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-primary transition-colors"
+            className="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -86,17 +94,19 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2 px-4 text-gray-700 hover:text-primary transition-colors"
+                className="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
             <div className="p-4">
+              <Link href="/contact">
               <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
                 <Phone className="mr-2 h-4 w-4" />
                 Contact Us
               </Button>
+              </Link>
             </div>
           </nav>
         )}
