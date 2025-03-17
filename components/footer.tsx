@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Facebook, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import { FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -60,7 +61,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Link href="https://www.facebook.com/varzimHaulage/" className="flex items-center hover:text-white">
-                  <Facebook className="h-5 w-5" />
+                  <FaFacebook className="h-5 w-5" />
                   <span className="ml-2">Facebook</span>
                 </Link>
               </li>
