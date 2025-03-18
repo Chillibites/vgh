@@ -138,14 +138,22 @@ export default function Home() {
                   <Phone className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-400">+44 (0) 7702 196382</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      <a href="tel:+447702196382" className="hover:underline hover:text-primary">
+                        +44 (0) 7702 196382
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-400">varziminfo@gmail.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      <a href="mailto:varziminfo@gmail.com" className="hover:underline hover:text-primary">
+                        varziminfo@gmail.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
