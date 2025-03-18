@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -19,11 +19,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'About', href: '/about' },
-  ];
+  // Memoize static navigation items
+  const navItems = useMemo(
+    () => [
+      { label: 'Home', href: '/' },
+      { label: 'Services', href: '/services' },
+      { label: 'About', href: '/about' },
+    ],
+    []
+  );
 
   return (
     <header 
@@ -76,8 +80,10 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
+            aria-expanded={isMobileMenuOpen}
             className="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -89,7 +95,10 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg mt-2 animate-fade-in">
+          <nav
+            className="md:hidden py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-lg mt-2 animate-fade-in"
+            aria-label="Mobile Navigation"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}

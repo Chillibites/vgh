@@ -2,9 +2,15 @@ import Image from 'next/image';
 import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// Adding metadata export improves SEO and readability.
+export const metadata = {
+  title: 'Contact Us',
+  description: 'Reach out to us via phone or email to discuss your project or ask any questions.'
+};
+
 export default function ContactPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="relative h-64 md:h-80">
         <Image
@@ -58,19 +64,27 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl">
-              <form className="space-y-6">
+              <form className="space-y-6" noValidate>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Name
+                    </label>
                     <input
+                      id="name"
+                      name="name"
                       type="text"
                       placeholder="Your Name"
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email
+                    </label>
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       placeholder="you@example.com"
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
@@ -78,22 +92,33 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    Subject
+                  </label>
                   <input
+                    id="subject"
+                    name="subject"
                     type="text"
                     placeholder="Subject"
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={4}
                     placeholder="Your Message"
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
                   ></textarea>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button
+                  type="submit"
+                  className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
                   Send Message
                 </Button>
               </form>
@@ -101,6 +126,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 } 
