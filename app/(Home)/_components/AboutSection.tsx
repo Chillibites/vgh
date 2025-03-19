@@ -18,7 +18,7 @@ export default function AboutSection() {
           <div className="animate-slide-up">
             <h2 className="text-3xl font-bold mb-6">About VGH</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              With years of experience in the logistics industry, we provide reliable and efficient transportation solutions tailored to your needs. Our commitment to excellence and customer satisfaction sets us apart.
+              At VGH Logistics, we transform global transportation with innovative logistics solutions designed to streamline your supply chain. With decades of industry experience, our dedicated team harnesses state-of-the-art technology to deliver efficient, sustainable, and tailored services that meet your business needs.
             </p>
             <ul className="space-y-4 mb-8">
               {features.map((item, index) => (
