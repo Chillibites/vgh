@@ -1,6 +1,6 @@
 "use client"
 import { Phone, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ContactForm } from '@/components/ContactForm';
 
 export default function ContactSection() {
   return (
@@ -37,41 +37,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl">
-            <form className="space-y-6" noValidate>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    id="name"
-                    type="text"
-                    autoComplete="name"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    autoComplete="email"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
-                ></textarea>
-              </div>
-              <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
-                Send Message
-              </Button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </section>

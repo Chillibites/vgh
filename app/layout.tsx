@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from 'react-hot-toast';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
@@ -56,7 +56,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
-          <Toaster />
+          <Toaster/>
         </ThemeProvider>
       </body>
     </html>
